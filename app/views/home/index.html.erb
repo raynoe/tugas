@@ -1,0 +1,7 @@
+<h1>KABAR UMMI</h1>
+
+  <% @posts.each do |post| %>
+    <hr>
+      <h3><%= link_to post.title, post_path(post) %></h3> 
+  <% end %>
+ 

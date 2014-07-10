@@ -1,5 +1,10 @@
 <h1>KABAR UMMI</h1>
-
+<%- if user_signed_in? %>
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_post_path,
+            :class => 'btn btn-primary' %>
+<%- end %>
+            </br>
   <% @posts.each do |post| %>
     <hr>
       <h3><%= link_to post.title, post_path(post) %></h3> 
